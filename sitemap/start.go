@@ -162,7 +162,7 @@ func Build() error {
 	}
 
 	curCompany, err := mongo.Companies.Find(ctx, bson.M{
-		"h": false,
+		"h": nil,
 	})
 	if err != nil {
 		logger.Log.Error().Err(err).Send()
