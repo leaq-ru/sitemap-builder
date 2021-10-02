@@ -48,7 +48,7 @@ func Build() error {
 		download = "download"
 	)
 
-	sm := stm.NewSitemap(0)
+	sm := stm.NewSitemap(1)
 	sm.SetDefaultHost(https + config.Env.Host.URL)
 	sm.SetSitemapsHost(https + "sitemap." + config.Env.Host.URL)
 	sm.SetSitemapsPath("")
