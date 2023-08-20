@@ -250,9 +250,9 @@ func uploadToS3(ctx context.Context) error {
 	for i := 0; true; i += 1 {
 		filename := ""
 		if i == 0 {
-			filename = "sitemap.xml.gz"
+			filename = "sitemap.xml"
 		} else {
-			filename = fmt.Sprintf("sitemap%s.xml.gz", strconv.Itoa(i))
+			filename = fmt.Sprintf("sitemap%s.xml", strconv.Itoa(i))
 		}
 		filepath := path.Join(wd, outFolderName, filename)
 
