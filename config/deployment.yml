@@ -33,10 +33,10 @@ spec:
               resources:
                 requests:
                   cpu: 800m
-                  memory: 1Gi
+                  memory: 750Mi
                 limits:
                   cpu: 800m
-                  memory: 1Gi
+                  memory: 750Mi
               env:
                 - name: S3_SITEMAPBUCKETNAME
                   valueFrom:
