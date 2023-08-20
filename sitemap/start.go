@@ -45,11 +45,13 @@ func Build() error {
 
 	const (
 		https    = "https://"
+		http     = "http://"
 		download = "download"
 	)
 
 	sm := stm.NewSitemap(1)
-	sm.SetDefaultHost(https + config.Env.Host.URL)
+	sm.SetCompress(false)
+	sm.SetDefaultHost(http + config.Env.Host.URL)
 	sm.SetSitemapsHost(https + "sitemap." + config.Env.Host.URL)
 	sm.SetSitemapsPath("")
 	sm.SetPublicPath(outFolderName)
